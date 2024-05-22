@@ -4,16 +4,11 @@ Task 1: Importing Modules
 Import the sys module, which provides access to some variables used or maintained by the Python interpreter and to functions that interact strongly with the interpreter.
 Import the time function from the time module to measure time durations.
 Import the sqrt function from the math module to calculate the square root of a number.
-Import all functions and classes from the tkinter module to use them without specifying the tkinter prefix.
-Import all functions from the random module to have access to them without specifying the random prefix.
+Import all (use *) functions and classes from the tkinter module to use them without specifying the tkinter prefix.
+Import all (use *) functions from the random module to have access to them without specifying the random prefix.
 """
 
 # write your code here
-# write your code here
-# write your code here
-# write your code here
-# write your code here
-
 
 from tkinter import messagebox
 import pygame
@@ -46,9 +41,7 @@ Set the title of the window to "BTA Rocket".
 """
 
 # write your code here
-# write your code here
-# write your code here
-# write your code here
+
 
 """
 Task 3: Creating the Canvas and Background
@@ -66,14 +59,11 @@ anchor=NW: anchor the image to the northwest corner of the canvas.
 """
 
 # write your code here
-# write your code here
-# write your code here
-
 
 c.pack()
 rocket_r = 30
 mid_x = width / 2
-mid_y = height / 2
+mid_y = right / 2
 rocket_speed = 10
 
 """
@@ -82,7 +72,7 @@ Task 4: Creating the Player
 1. Load the rocket image rocket_img from the specified file path.
 
 2. Create an oval representing the rocket's body with parameters:
-0, 30, 80, 70: the coordinates of the top-left and bottom-right corners of the oval,
+20, 44, 148, 84: the coordinates of the top-left and bottom-right corners of the oval,
 outline='red': the outline color of the oval.
 
 3. Place the rocket image at coordinates (-80, -5) on the canvas with parameters:
@@ -91,10 +81,6 @@ anchor=NW: anchor the image to the northwest corner of the canvas.
 """
 
 # write your code here
-# write your code here
-# write your code here
-# write your code here
-
 
 c.move(rocket_oval, mid_x, mid_y)
 c.move(rocket_image, mid_x, mid_y)
@@ -103,22 +89,17 @@ c.move(rocket_image, mid_x, mid_y)
 Task 5: Creating the Text
 
 1. Place the text "Time" at coordinates (50, 30) on the canvas with parameters:
-text='Time': the text "Time",
+text='TIME': the text "TIME",
 fill='white': the text color.
 
-2. Place the text "Score" at coordinates (150, 30) on the canvas with parameters:
-text='Score': the text "Score",
+2. Place the text "SCORE" at coordinates (150, 30) on the canvas with parameters:
+text='SCORE': the text "SCORE",
 fill='white': the text color.
 
 3. Create variables time_text and score_text to store the identifiers of the text objects for time and score respectively, placed at coordinates (50, 50) and (150, 50) on the canvas with white color.
-c.create_text(50, 30, text='Time', fill='white')
 """
 
 # write your code here
-# write your code here
-# write your code here
-# write your code here
-
 
 additional_time_label = Label(window)
 
@@ -134,7 +115,7 @@ asteroid_img = [PhotoImage(file='asteroid_11.png'),
 """
 Task 6: Rocket Movement
 
-1. Function move_rocket(event) that takes an event parameter representing the key event triggered by the user is already defined(remove #).
+1. Function named move_rocket that takes an event parameter representing the key event triggered by the user is already defined. def move_rocket(event):
 2. Inside the function, check which arrow key was pressed using the event.keysym attribute.
 3. If the 'Up' arrow key is pressed, move both the rocket oval and image objects upwards on the canvas by a value determined by the variable rocket_speed.
 4. If the 'Down' arrow key is pressed, move both the rocket oval and image objects downwards on the canvas by a value determined by the variable rocket_speed.
@@ -147,21 +128,10 @@ Code Explanation:
 - rocket_speed: Represents the speed at which the rocket moves in pixels per event trigger.
 """
 
-
 # def move_rocket(event):
 
 # write your code here
-# write your code here
-# write your code here
-# write your code here
-# write your code here
-# write your code here
-# write your code here
-# write your code here
-# write your code here
-# write your code here
-# write your code here
-# write your code here
+
 
 def create_asteroid():
     x = width
@@ -292,9 +262,6 @@ Start playing the background music in an infinite loop using the pygame.mixer.mu
 Set the volume level of the background music using the pygame.mixer.music.set_volume() function. Specify a value from 0.0 (mute) to 1.0 (full volume) as an argument to the function. In this case, set the volume level to 0.1 to provide a subtle audio backdrop for the game environment.
 """
 
-# write your code here
-# write your code here
-# write your code here
 # write your code here
 
 window.after(frame_rate, create_asteroid)

@@ -4,8 +4,8 @@ Task 1: Importing Modules
 Import the sys module, which provides access to some variables used or maintained by the Python interpreter and to functions that interact strongly with the interpreter.
 Import the time function from the time module to measure time durations.
 Import the sqrt function from the math module to calculate the square root of a number.
-Import all functions and classes from the tkinter module to use them without specifying the tkinter prefix.
-Import all functions from the random module to have access to them without specifying the random prefix.
+Import all (use *) functions and classes from the tkinter module to use them without specifying the tkinter prefix.
+Import all (use *) unctions from the random module to have access to them without specifying the random prefix.
 """
 ###### Answers:######
 import sys
@@ -66,7 +66,7 @@ anchor=NW: anchor the image to the northwest corner of the canvas.
 """
 ###### Answers:######
 c = Canvas(window, width=width, height=height, bg='blue')
-background_img = PhotoImage(file='background_space.png')
+background_img = PhotoImage(file='background.png')
 c.create_image(0, -150, image=background_img, anchor=NW)
 ####################
 
@@ -82,7 +82,7 @@ Task 4: Creating the Player
 1. Load the rocket image rocket_img from the specified file path.
 
 2. Create an oval representing the rocket's body with parameters:
-0, 30, 80, 70: the coordinates of the top-left and bottom-right corners of the oval,
+20, 44, 148, 84: the coordinates of the top-left and bottom-right corners of the oval,
 outline='red': the outline color of the oval.
 
 3. Place the rocket image at coordinates (-80, -5) on the canvas with parameters:
@@ -90,9 +90,8 @@ image=rocket_img: the rocket image,
 anchor=NW: anchor the image to the northwest corner of the canvas.
 """
 ###### Answers:######
-rocket_img = PhotoImage(file='rocket_11.png')
+rocket_img = PhotoImage(file='rocket.png')
 rocket_oval = c.create_oval(20, 44, 148, 84, outline='red')
-# rocket_oval = c.create_oval(0, 30, 80, 70, outline='red')
 rocket_image = c.create_image(-80, -5, image=rocket_img, anchor=NW)
 ####################
 
@@ -103,32 +102,30 @@ c.move(rocket_image, mid_x, mid_y)
 Task 5: Creating the Text
 
 1. Place the text "Time" at coordinates (50, 30) on the canvas with parameters:
-text='Time': the text "Time",
+text='TIME': the text "TIME",
 fill='white': the text color.
 
-2. Place the text "Score" at coordinates (150, 30) on the canvas with parameters:
-text='Score': the text "Score",
+2. Place the text "SCORE" at coordinates (150, 30) on the canvas with parameters:
+text='SCORE': the text "SCORE",
 fill='white': the text color.
 
 3. Create variables time_text and score_text to store the identifiers of the text objects for time and score respectively, placed at coordinates (50, 50) and (150, 50) on the canvas with white color.
-c.create_text(50, 30, text='Time', fill='white')
 """
 ###### Answers:######
-c.create_text(50, 30, text='Time', fill='white')
-c.create_text(150, 30, text='Score', fill='white')
+c.create_text(50, 30, text='TIME', fill='white')
+c.create_text(150, 30, text='SCORE', fill='white')
 time_text = c.create_text(50, 50, fill='white')
 score_text = c.create_text(150, 50, fill='white')
 ####################
 
 additional_time_label = Label(window)
 
-asteroid_img = [PhotoImage(file='asteroid_11.png'),
-                PhotoImage(file='asteroid_21.png'),
-                PhotoImage(file='asteroid_31.png'),
-                PhotoImage(file='asteroid_41.png'),
-                PhotoImage(file='asteroid_51.png'),
-                PhotoImage(file='asteroid_61.png'),
-                PhotoImage(file='asteroid_71.png')]
+asteroid_img = [PhotoImage(file='asteroid_1.png'),
+                PhotoImage(file='asteroid_2.png'),
+                PhotoImage(file='asteroid_3.png'),
+                PhotoImage(file='asteroid_4.png'),
+                PhotoImage(file='asteroid_5.png'),
+                PhotoImage(file='asteroid_6.png')]
 
 
 """
