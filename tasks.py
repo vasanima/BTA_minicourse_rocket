@@ -63,7 +63,7 @@ anchor=NW: anchor the image to the northwest corner of the canvas.
 c.pack()
 rocket_r = 30
 mid_x = width / 2
-mid_y = right / 2
+mid_y = height / 2
 rocket_speed = 10
 
 """
@@ -103,13 +103,12 @@ fill='white': the text color.
 
 additional_time_label = Label(window)
 
-asteroid_img = [PhotoImage(file='asteroid_11.png'),
-                PhotoImage(file='asteroid_21.png'),
-                PhotoImage(file='asteroid_31.png'),
-                PhotoImage(file='asteroid_41.png'),
-                PhotoImage(file='asteroid_51.png'),
-                PhotoImage(file='asteroid_61.png'),
-                PhotoImage(file='asteroid_71.png')]
+asteroid_img = [PhotoImage(file='asteroid_1.png'),
+                PhotoImage(file='asteroid_2.png'),
+                PhotoImage(file='asteroid_3.png'),
+                PhotoImage(file='asteroid_4.png'),
+                PhotoImage(file='asteroid_5.png'),
+                PhotoImage(file='asteroid_6.png')]
 
 
 """
